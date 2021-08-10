@@ -31,6 +31,7 @@ module.exports = {
 			favicon: path.resolve(__dirname, 'src/index.ico')
 		}),
 		new VueLoaderPlugin()
+
 	],
 
 	// ---------------------------loader--------------------------
