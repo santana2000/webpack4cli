@@ -18,6 +18,6 @@ module.exports = {
     "rules": {
         // "quotes": 2,
         "semi": 2,
-        "no-console": 1,
+        // "no-console": 1,
     }
 };
