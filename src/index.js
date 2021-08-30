@@ -1,8 +1,10 @@
 // import _ from 'lodash';
 
-
 // 引入就够了，会自动赋值，不需要再add了
 import './index.css';
+// import './sass/index.scss';
+require('./sass/index.scss');
+
 // const element = document.getElementsByClassName('item');
 // element.classList.add('hello');
 

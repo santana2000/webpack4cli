@@ -39,9 +39,11 @@ export default {
     },
 };
 </script>
-<style scoped>
+<style scoped lang='scss'>
+$bg_color:green;
 h2 {
-    color: rgb(24, 192, 164);
+    // color: rgb(24, 192, 164);
+    color: $bg_color
 }
 img {
     width: 200px;

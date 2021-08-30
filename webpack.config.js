@@ -10,7 +10,7 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		app: './src/index.js',
-		main: './src/main.js'
+		// main: './src/main.js'
 	},
 	output: {
 		// filename: 'bundle.js',
@@ -37,12 +37,14 @@ module.exports = {
 	// ---------------------------loader--------------------------
 	module: {
 		rules: [
+			
 			{
 				// 使用css-loader后，无需再html里引入css文件，进而减少网络请求
 				test: /\.css$/,
 				use: [
 					'style-loader',
-					'css-loader'
+					'css-loader',
+					'postcss-loader',
 				]
 			},
 			{
@@ -61,7 +63,15 @@ module.exports = {
 				loader: "babel-loader"
 				//注意新版babel在package.json里的配置书写
 				// "presets": ["@babel/preset-env"]
-
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'postcss-loader',
+					'sass-loader'
+				]
 			}
 
 		]

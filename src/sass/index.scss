@@ -1,0 +1,15 @@
+$bg_color: rgba(226, 164, 113, 0.849);
+$font_color: white;
+$button_color: rgb(11, 78, 179);
+
+*{
+    box-sizing: border-box;
+}
+html,body{
+    background-color: $bg_color;
+    color: $font_color;
+    scrollbar-width: none
+}
+a{
+    transition :transform 1s
+}

@@ -1,22 +1,22 @@
 // 闭包示例
 for (var i = 0; i < 5; i++) {
 
-    console.log(i); // 0 1 2 3 4
-
-    console.log(i++); // 0 2 4
-
-    // 提出问题
-    setTimeout(() => {
-        console.log(i++);
-    }, 10);
-
-    // 方案一 （此处匿名函数传入的参数x与setTimeout里的函数形成闭包环境）
-    // 通过闭包模拟出一个块级作用域
-    (function (x) {
+    /*     console.log(i); // 0 1 2 3 4
+    
+        console.log(i++); // 0 2 4
+    
+        // 提出问题
         setTimeout(() => {
-            console.log(x++);
+            console.log(i++);
         }, 10);
-    })(i);
+    
+        // 方案一 （此处匿名函数传入的参数x与setTimeout里的函数形成闭包环境）
+        // 通过闭包模拟出一个块级作用域
+        (function (x) {
+            setTimeout(() => {
+                console.log(x++);
+            }, 10);
+        })(i); */
 
 
     // 方案二 （添加外部辅助函数，形成闭包）
@@ -34,13 +34,12 @@ for (var i = 0; i < 5; i++) {
 }
 
 function tempAdd(i) {
-    let x = i;
+    // let x = i;
     function addCount() {
-        console.log(x++);
+        console.log(i++);
     }
     return addCount;
 }
-
 
 // --------------------- x++ -----------------------
 
