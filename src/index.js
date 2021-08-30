@@ -1,41 +1,28 @@
 // import _ from 'lodash';
 
 // 引入就够了，会自动赋值，不需要再add了
-import './index.css';
+import "./index.css";
 // import './sass/index.scss';
-require('./sass/index.scss');
+require("./sass/index.scss");
 
 // const element = document.getElementsByClassName('item');
 // element.classList.add('hello');
 
-import Vue from 'vue';
+import Vue from "vue";
 import Hello from "./components/Hello.vue";
 
 const app = new Vue({
-	el:'#app',
-	template: "<Hello/>",
-	components:{
-		Hello
-	}
+    el: "#app",
+    template: "<Hello/>",
+    components: {
+        Hello
+    }
+});
 
-})
-
- 
-console.log([1,2,3].map(n => n+1),'------------');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(
+    [1, 2, 3].map(n => n + 1),
+    "------------"
+);
 
 /* function component() {
 	const element = document.createElement('div');
